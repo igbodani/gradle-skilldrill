@@ -3,12 +3,59 @@
  */
 package edu.isu.cs.student.project;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        ListView<Student> students = new ListView<>();
+        VBox studentBox = new VBox();
+        Label studentLabel = new Label("Students");
+        studentBox.getChildren().addAll(studentLabel,students);
+        studentBox.setAlignment(Pos.CENTER_LEFT);
+
+        Label label = new Label("Is Taking");
+        label.setAlignment(Pos.CENTER);
+
+        ListView<Course> courseListView = new ListView<>();
+        Label courseLabel = new Label("Courses");
+        VBox courseBox = new VBox();
+        courseBox.getChildren().addAll(courseLabel,courseListView);
+
+        Button loadData = new Button("Load Data");
+        loadData.setAlignment(Pos.BOTTOM_RIGHT);
+        loadData.setOnAction(event -> {
+
+        });
+
+        HBox button = new HBox();
+        button.getChildren().addAll(loadData);
+        button.setAlignment(Pos.BOTTOM_RIGHT);
+
+
+
+
+        BorderPane pane = new BorderPane();
+        pane.setLeft(studentBox);
+        pane.setCenter(label);
+        pane.setRight(courseBox);
+        pane.setBottom(button);
+
+        Scene scene = new Scene(pane, 600, 500);
+        primaryStage.setTitle("Course View");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
     }
 }

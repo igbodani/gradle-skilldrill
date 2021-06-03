@@ -11,6 +11,7 @@ public class Student {
     public Student() {
     }
 
+
     public String getFirstName() {
         return firstName;
     }
@@ -39,9 +40,4 @@ public class Student {
                 '}';
     }
 
-
-    public static void main(String[] args) {
-
-
-    }
 }

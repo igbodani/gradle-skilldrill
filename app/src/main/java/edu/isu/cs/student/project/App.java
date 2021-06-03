@@ -19,6 +19,16 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        Button loadData = new Button("Load Data");
+        loadData.setAlignment(Pos.BOTTOM_RIGHT);
+        loadData.setOnAction(event -> {
+
+        });
+
+        HBox button = new HBox();
+        button.getChildren().addAll(loadData);
+        button.setAlignment(Pos.BOTTOM_RIGHT);
+
         ListView<Student> students = new ListView<>();
         VBox studentBox = new VBox();
         Label studentLabel = new Label("Students");
@@ -32,17 +42,6 @@ public class App extends Application {
         Label courseLabel = new Label("Courses");
         VBox courseBox = new VBox();
         courseBox.getChildren().addAll(courseLabel,courseListView);
-
-        Button loadData = new Button("Load Data");
-        loadData.setAlignment(Pos.BOTTOM_RIGHT);
-        loadData.setOnAction(event -> {
-
-        });
-
-        HBox button = new HBox();
-        button.getChildren().addAll(loadData);
-        button.setAlignment(Pos.BOTTOM_RIGHT);
-
 
 
 

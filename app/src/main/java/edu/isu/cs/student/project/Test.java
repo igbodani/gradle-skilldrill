@@ -24,8 +24,8 @@ public class Test {
         int [][] min = new int[3][3];
 
             Scanner scan = new Scanner(System.in);
-            int value;
-/*
+            int values;
+
         for(int i = 0; i < arr.length; i ++){
             for(int j = 0; j < arr[i].length; j ++){
                 arr[i][j] = scan.nextInt();
@@ -42,13 +42,13 @@ public class Test {
 
         for(int i = 0; i < min.length; i ++){
             for(int j = 0; j < min[i].length; j ++){
-                min[i][j] = var[i][j] - arr[i][j];
+                min[i][j] = arr[i][j] * var[j][i];
                 System.out.print(min[i][j] + " ");
             }
             System.out.println();
         }
 
- */
+
 
 
 }}

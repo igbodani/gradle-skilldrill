@@ -1,11 +1,11 @@
 package edu.isu.cs.student.project;
 
 public class Course {
-    protected String title;
-    protected int number;
-    protected String subject;
+    private String title;
+    private int number;
+    private String subject;
 
-    public Course(){
+    public Course() {
 
     }
 
@@ -20,8 +20,6 @@ public class Course {
     public String getSubject() {
         return subject;
     }
-
-
 
     public void setSubject(String subject) {
         this.subject = subject;
